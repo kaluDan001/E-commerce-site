@@ -7,22 +7,18 @@
 
     <div class="banner-content">
         <div class="banner-text">
-            <span class="sale-tag">Summer Sale</span>
+            <span id = "banner-subtitle"></span>
 
-            <h1>Up to 50% Off on <br> Top Products</h1>
+            <h1 id = "banner-title"></h1>
 
-            <p>
-                Discover amazing deals on electronics,
-                fashion, home essentials and more.
+            <p id = "banner-description">
+
             </p>
 
-            <div class="banner-buttons">
-                <a href="#" class="shop-btn">Shop Now</a>
-                <a href="#" class="view-btn">View Deals</a>
-            </div>
+
         </div>
 
-        <div class="banner-images">
+        <div class="banner-images" id = "banner-image">
             <img src="{% static "./app/images/headphones1.png" %}" alt="Headphones">
             <img src="{% static "./app/images/watch.png" %}" alt="Smart Watch">
             <img src="{% static "./app/images/plant.png" %}" alt="Plant">
@@ -34,3 +30,26 @@
 
 
 {% endblock content %}
+
+{% block scripts %}
+<script>
+   const banners = [
+     {% for banner in banners %}
+     {
+        id: {{banner.id}},
+        subtitle: "{{banner.subtitle|escapejs}}",
+        title: "{{banner.title|escapejs}}",
+        description: "{{banner.description|escapejs}}",
+        image1: "{{banner.image1.url}}",
+        image2: "{{banner.image2.url}}",
+        image3: "{{banner.image3.url}}"
+     },
+     
+     
+     
+     {% endfor %}
+   ]
+</script>
+
+<script src = "{% static "./app/js/app.js" %}"></script>
+{% endblock scripts %}
