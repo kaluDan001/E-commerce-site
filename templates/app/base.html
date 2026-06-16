@@ -35,7 +35,37 @@
     </small>
    </header>
   <nav class="first-dash"></nav>
+  <div>
+  <nav>
+    <span class="vertical-dash-0"></span>
+    <img src="{% static "./app/images/menu.png" %}" width = "30" alt="">
+    <select name="features" id="">
+        <option value="">All Categories</option>
+        <option value="">Footwears</option>
+        <option value="">Accesories</option>
+        <option value="">Entertainment</option>
+      </select>
+      <span class="vertical-dash-1"></span>
+      <div class = "navbar-1">
+        <a href="" class = "nav-item">Home</a>
+        <a href="" class = "nav-item">Shop</a>
+        <select name="categories" id="categories"  class = "nav-item">
+            <option value="">Categories</option>
+        </select>
+        <a href=""  class = "nav-item">Deals</a>
+        <a href=""  class = "nav-item">About us</a>
+        <a href=""  class = "nav-item">Contact</a>
+      </div>
+  </nav>
+  </div>
+   <nav class="second-dash"></nav>
+  
    <main>
+         {% block content %}
+         
+
+         
+        {% endblock content %}
 
    </main>
    <footer>

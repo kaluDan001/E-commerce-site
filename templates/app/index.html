@@ -1,0 +1,36 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="hero-banner">
+    <button class="nav-btn prev">&#10094;</button>
+
+    <div class="banner-content">
+        <div class="banner-text">
+            <span class="sale-tag">Summer Sale</span>
+
+            <h1>Up to 50% Off on <br> Top Products</h1>
+
+            <p>
+                Discover amazing deals on electronics,
+                fashion, home essentials and more.
+            </p>
+
+            <div class="banner-buttons">
+                <a href="#" class="shop-btn">Shop Now</a>
+                <a href="#" class="view-btn">View Deals</a>
+            </div>
+        </div>
+
+        <div class="banner-images">
+            <img src="{% static "./app/images/headphones1.png" %}" alt="Headphones">
+            <img src="{% static "./app/images/watch.png" %}" alt="Smart Watch">
+            <img src="{% static "./app/images/plant.png" %}" alt="Plant">
+        </div>
+    </div>
+
+    <button class="nav-btn next">&#10095;</button>
+</section>
+
+
+{% endblock content %}
