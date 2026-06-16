@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Buy</title>
+    <link rel="stylesheet" href="{% static './app/css/style.css'%}">
 </head>
 <body>
    <header>
     <span>
-        <img src="{% static "app/images/logo.png" %}" width = "30" alt="">
+        <img src="{% static "./app/images/logo.png" %}" width = "30" alt="">
         <b>Easy<b>Buy</b></b>
     </span>
     <div>
@@ -24,8 +25,8 @@
         </form>
     </div>
     <small>
-        <img src="{% static "app/images/notifications.png" %}" width = "30" alt="">
-        <img src="{% static "app/images/cart.png" %}" width = "30" alt="">
+        <img src="{% static "./app/images/notifications.png" %}" width = "30" alt="">
+        <img src= "{% static "./app/images/cart.png" %}"  width = "30" alt="">
     </small>
    </header>
    <main>
