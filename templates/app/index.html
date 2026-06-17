@@ -2,54 +2,92 @@
 {% load static %}
 
 {% block content %}
-<section class="hero-banner">
-    <button class="nav-btn prev">&#10094;</button>
 
-    <div class="banner-content">
-        <div class="banner-text">
-            <span id = "banner-subtitle"></span>
+<div class="body-main-block-content">
 
-            <h1 id = "banner-title"></h1>
+    <!-- Existing content above -->
 
-            <p id = "banner-description">
 
-            </p>
+    <!-- Summer Sale Banner -->
+    <section class="hero-banner">
 
+        <button class="slider-btn prev">&#10094;</button>
+
+        <div class="banner-slider">
+
+            {% for banner in banners %}
+
+            <div class="banner-slide {% if forloop.first %}active{% endif %}"
+                 style="background: {{ banner.background_color }};">
+
+                <div class="banner-content">
+
+                    <!-- Left Side -->
+                    <div class="banner-left">
+
+                        <span class="sale-tag">
+                            {{ banner.title }}
+                        </span>
+
+                        <h1>{{ banner.discount }}</h1>
+
+                        <p>
+                            {{ banner.subtitle }}
+                        </p>
+
+                        <div class="banner-buttons">
+
+                            <a href="{{ banner.button1_link }}"
+                               class="btn-primary">
+                                {{ banner.button1_text }}
+                            </a>
+
+                            <a href="{{ banner.button2_link }}"
+                               class="btn-secondary">
+                                {{ banner.button2_text }}
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Right Side -->
+                    <div class="banner-right">
+
+                        <div class="circle image1">
+                            <img src="{{ banner.image1.url }}" class = "product product1">
+                        </div>
+
+                        <div class="circle image2">
+                            <img src="{{ banner.image2.url }}" class = "product product2">
+                        </div>
+
+                        <div class="circle image3">
+                            <img src="{{ banner.image3.url }}" class = "product product3">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
 
         </div>
 
-        <div class="banner-images" id = "banner-image">
-            <img src="{% static "./app/images/headphones1.png" %}" alt="Headphones">
-            <img src="{% static "./app/images/watch.png" %}" alt="Smart Watch">
-            <img src="{% static "./app/images/plant.png" %}" alt="Plant">
-        </div>
-    </div>
+        <button class="slider-btn next">&#10095;</button>
 
-    <button class="nav-btn next">&#10095;</button>
-</section>
+    </section>
+
+
+    <!-- Existing content below -->
+
+</div>
+
+<script src="{% static './app/js/app.js' %}"></script>
+
 
 
 {% endblock content %}
-
-{% block scripts %}
-<script>
-   const banners = [
-     {% for banner in banners %}
-     {
-        id: {{banner.id}},
-        subtitle: "{{banner.subtitle|escapejs}}",
-        title: "{{banner.title|escapejs}}",
-        description: "{{banner.description|escapejs}}",
-        image1: "{{banner.image1.url}}",
-        image2: "{{banner.image2.url}}",
-        image3: "{{banner.image3.url}}"
-     },
-     
-     
-     
-     {% endfor %}
-   ]
-</script>
-
-<script src = "{% static "./app/js/app.js" %}"></script>
-{% endblock scripts %}

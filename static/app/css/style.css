@@ -208,144 +208,144 @@ body > div > nav > select{
     background-color: grey;
 }
 
-
-/* HERO BANNER WRAPPER */
-.hero-banner {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  overflow: hidden;
-  color: white;
-  padding: 40px;
+.hero-banner{
+    position:relative;
+    margin:40px 0;
+    border-radius:25px;
+    overflow:hidden;
 }
 
-/* CONTENT LAYOUT */
-.banner-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 1200px;
-  gap: 40px;
+.banner-slide{
+    display:none;
+    padding:70px;
+    min-height:450px;
+    color:white;
+    transition:.5s;
 }
 
-/* TEXT AREA */
-.banner-text {
-    display: flex;
-    flex-direction: column;
-  flex: 1;
-  gap: 40px;
+.banner-slide.active{
+    display:block;
 }
 
-#banner-subtitle {
-  font-size: 30px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #38bdf8;
-  display: inline-block;
-  margin-bottom: 10px;
+.banner-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-#banner-title {
-  font-size: 60px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  line-height: 1.2;
+.banner-left{
+    width:45%;
 }
 
-#banner-description {
-  font-size: 16px;
-  color: #cbd5e1;
-  line-height: 1.6;
-  max-width: 500px;
+.sale-tag{
+    background:blue;
+    padding:8px 20px;
+    border-radius:30px;
+    font-size:20px;
 }
 
-/* IMAGE SECTION */
-.banner-images {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  min-height: 420px;
+.banner-left h1{
+    font-size:70px;
+    margin-top:25px;
+    margin-bottom:20px;
 }
 
-.banner-images img {
-  width: 260px;
-  height: auto;
-  object-fit: contain;
-  position: absolute;
-  transition: 0.4s ease;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+.banner-left p{
+    font-size:18px;
+    line-height:1.8;
+    color:#d6d6d6;
+    margin-bottom:30px;
 }
 
-/* IMAGE POSITIONING (floating effect) */
-.banner-images img:nth-child(1) {
-  transform: rotate(-13deg) translateX(-170px);
-  z-index: 3;
+.banner-buttons{
+    display:flex;
+    gap:20px;
 }
 
-.banner-images img:nth-child(2) {
-  transform: rotate(11deg);
-  z-index: 2;
+.btn-primary{
+    text-decoration:none;
+    background: rgba(26, 26, 221, 0.562);
+    color:white;
+    padding:15px 35px;
+    border-radius:50px;
+    font-weight:600;
 }
 
-.banner-images img:nth-child(3) {
-  transform: rotate(-9deg) translateX(170px);
-  z-index: 1;
+.btn-secondary{
+    text-decoration:none;
+    border:1px solid rgba(255,255,255,.3);
+    color:white;
+    padding:15px 35px;
+    border-radius:50px;
 }
 
-/* NAV BUTTONS */
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  color: white;
-  font-size: 28px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s ease;
-  backdrop-filter: blur(10px);
+.banner-right{
+    width:55%;
+    position:relative;
+    height:450px;
+    gap: 170px;
 }
 
-.nav-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
+.circle{
+    position:absolute;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
 }
 
-.nav-btn.prev {
-  left: 20px;
+.circle img{
+    width:80%;
+    object-fit:contain;
+    transition:.5s;
 }
 
-.nav-btn.next {
-  right: 20px;
+
+.image1{
+    width:320px;
+    height:320px;
+    top:60px;
+    left:0;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 900px) {
-  .banner-content {
-    flex-direction: column;
-    text-align: center;
-  }
+.image2{
+    width:250px;
+    height:250px;
+    top:240px;
+    left:235px;
+}
 
-  #banner-description {
-    margin: 0 auto;
-  }
+.image3{
+    width:350px;
+    height:350px;
+    top:20px;
+    right:10px;
+    left: 350px;
+}
 
-  .banner-images {
-    margin-top: 30px;
-  }
+.slider-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:50px;
+    height:50px;
+    border:none;
+    background:rgba(255,255,255,.2);
+    color:white;
+    font-size:25px;
+    border-radius:50%;
+    cursor:pointer;
+    z-index:10;
+}
 
-  .banner-images img {
-    position: static;
-    transform: none;
-    margin: 0 10px;
-  }
+.prev{
+    left:15px;
+}
+
+.next{
+    right:15px;
+}
+
+.slider-btn:hover{
+    background:#ff6b00;
 }
