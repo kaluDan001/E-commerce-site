@@ -349,3 +349,143 @@ body > div > nav > select{
 .slider-btn:hover{
     background:#ff6b00;
 }
+
+.services{
+  width: 100%;
+  height: 40px;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+
+.services > span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.free{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: lightblue;
+  padding: 10px ;
+}
+
+.secure{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(215, 250, 215);
+  padding: 10px ;
+}
+
+.return{
+   width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(248, 246, 124);
+  padding: 10px ;
+}
+
+.headphones{
+   width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(222, 157, 252);
+  padding: 10px ;
+}
+
+.services > span > div > b{
+  font-weight: 650;
+}
+
+.services > span > div > p{
+  font-weight: 400;
+}
+
+.items{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px;
+}
+
+.items > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 30px;
+}
+
+.items > div > b{
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.items > div > a{
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.items > span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 50 30px;
+  flex-wrap: wrap;
+}
+
+.items > span > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid rgb(240, 238, 238);
+  padding: 10px 40px;
+  border-radius: 13px;
+}
+
+.items > span > div > a > img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.electronics{
+   padding: 10px 30px;
+  background-color: rgb(242, 242, 243);
+  border-radius: 15px;
+}
+
+.fashion{
+   padding: 10px 30px;
+  background-color: rgb(253, 243, 252);
+  border-radius: 15px;
+}
+
+.home{
+   padding: 10px 30px;
+  background-color: rgb(243, 250, 245);
+  border-radius: 15px;
+}
+
+.beauty{
+   padding: 10px 30px;
+  background-color: rgb(248, 221, 236);
+  border-radius: 15px;
+}
+
+.sports{
+   padding: 10px 30px;
+  background-color: rgb(255, 235, 255);
+  border-radius: 15px;
+}
